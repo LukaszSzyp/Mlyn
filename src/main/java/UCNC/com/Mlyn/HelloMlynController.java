@@ -12,7 +12,7 @@ import javax.websocket.server.PathParam;
 public class HelloMlynController {
 
     @RequestMapping(method = RequestMethod.GET, path = "/witaj")
-    public String helloMlyn(@PathParam("name") String name) {
-        return String.format("Witaj %s",name);
+    public String helloMlyn(@PathParam("message") String message, @PathParam("name") String name) {
+        return new Index(message,name).toString();
     }
 }

@@ -1,0 +1,15 @@
+CREATE TABLE `mlynstore`.`product` (
+  `idproduct` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `type` INT(4) NOT NULL,
+  `description` VARCHAR(40) NOT NULL,
+  PRIMARY KEY (`idproduct`),
+  UNIQUE INDEX `idproduct_UNIQUE` (`idproduct` ASC) VISIBLE);
+
+  CREATE TABLE `mlynstore`.`package` (
+    `idpackage` INT NOT NULL,
+    `type` VARCHAR(45) NOT NULL,
+    `capacity` INT NOT NULL,
+    PRIMARY KEY (`idpackage`),
+    UNIQUE INDEX `idpackage_UNIQUE` (`idpackage` ASC) VISIBLE);
+
